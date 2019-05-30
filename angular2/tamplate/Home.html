@@ -1,0 +1,40 @@
+<!-- <div ng-include="'/tamplate/Header.html'"></div>  -->
+ <div ng-include="'/tamplate/banner.html'"></div>  
+<div class="banner-down">
+    <div class="container">
+        <div class="row">
+           
+                <form  enctype="multipart/form-data" ng-submit="fSubmit()">
+             
+                    <div class="col-md-4">
+                        <div class="picture">
+                            <input type="file" name="file-to-upload" fileput="file" id= "fimage" filepreview="filepreview" filename="filename" ng-model="fileput"/>
+                            <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview" />
+                            
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Property name <small>(required)</small></label>
+                            <input name="fname" type="text" class="form-control" placeholder="Super villa ..." ng-model="fname"  required/>
+                        
+                        </div> 
+                        <div class="form-group">
+                            <label>Property price <small>(required)</small></label>
+                            <input name="fprice" type="text" className="form-control" ref="fprice" id="fprice" placeholder="3330000" ng-model="fprice" required />
+                        </div>
+                    </div> 
+                    <div class="col-md-4">
+                         <div class="space"></div>
+                            <div class="pull-right">
+                                <input type='submit' class='btn btn-next btn-primary' id="finish" name='finish' value='Finish' required /> 
+                            </div>
+                        </div>
+                    </div> 
+                </form>
+           
+        </div>
+    </div>
+</div>
+
+ <div ng-include="'/tamplate/footer.html'"></div> 

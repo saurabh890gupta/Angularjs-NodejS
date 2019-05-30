@@ -1,0 +1,22 @@
+.table table-bordered table-hover table-striped{
+	table-layout: fixed;
+}
+.table-responsive thead tr th{
+	text-decoration: none;
+
+}
+
+ tbody tr td{
+  list-style-type: none;
+
+}
+  .adminUserDeletBtn{
+	background-color:#ff8000;
+    color: white;
+    padding: 8px 10px;
+    margin: 6px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    border-radius: 4px;
+  }

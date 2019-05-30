@@ -1,0 +1,87 @@
+
+<div class="table-scrol"> 
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-12">
+                    <h1 style="text-align:center">All the Users</h1>  
+                <form>
+                    <div class="table-responsive"> 
+                        <div class="form-group">
+                            <label>Search:</label>
+                            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                        </div>
+                        <table class="table table-bordered table-hover table-striped">  
+                            <thead >  
+                                <tr>  
+                                    <th>Serial.No</th>   
+                                    <th>Id</th>      
+                                    <th>User Name</th>  
+                                    <th>Email</th>  
+                                    <th>Password</th>  
+                                    <th>Address</th> 
+                                    <th>Contact</th>  
+                                    <th>city</th>  
+                                    <th>State</th>  
+                                    <th>Delete</th>  
+                                </tr>  
+                            </thead> 
+                            <tbody ng-repeat=" x in result | offset: currentPage*itemsPerPage | limitTo: itemsPerPage |filter:search">
+                                <tr>
+                                    <td>
+                                        <div >{{$index + 1 *(currentPage*itemsPerPage)}}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{x._id}}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{x.user_name}}</div>
+                                    </td>
+                                    <td> 
+                                        <div >{{x.email}}</div>
+                                    </td>
+                                    <td> 
+                                        <div></div>
+                                    </td>
+                                    <td>
+                                        <div >{{x.address}}</div>
+                                    </td>
+                                    <td>
+                                            <div></div>
+                                    </td>
+                                    <td>
+                                        <div ></div>
+                                    </td>
+                                    <td>
+                                        <div ></div>
+                                    </td>
+                                    <td>
+                                        <div><a class="adminUserDeletBtn" ng-click="DeleteUser(x)">Delete</a></div>
+                                    </td>
+                                </tr>
+                            </tbody> 
+                        </table> 
+                        <tfoot >
+                            <td colspan="3" >
+                                <div class="pagination" class="pull-right">
+                                <ul>
+                                    <li ng-class="prevPageDisabled()">
+                                    <a href ng-click="prevPage()">« Prev</a>
+                                    </li>
+                                    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                    <a href="#">{{n+1}}</a>
+                                    </li>
+                                    <li ng-class="nextPageDisabled()">
+                                    <a href ng-click="nextPage()">Next »</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </td>
+                        </tfoot> 
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  
+  
+          

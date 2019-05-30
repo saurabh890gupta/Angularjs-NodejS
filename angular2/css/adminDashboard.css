@@ -1,0 +1,32 @@
+
+ #userpropertyBtn{
+    border:1px solid #FDC600;
+    background-color:#FDC600;
+      padding: 13px 20px ;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      }
+    #usersignBtn{
+      border:1px solid #FDC600;
+    background-color: #FDC600;
+      padding: 13px 20px ;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+  
+      }
+    .dashbordPage{
+        width: 100%;
+        background-color: bisque;
+    } 
+    .dashlgbtn{
+        width: 100%;
+        height: 100px;
+       text-align: center;
+    }
+    .dashlgbtn nav ul li {
+    padding: 50px;
+    padding-top:40px;
+    display: inline-block;   
+    }

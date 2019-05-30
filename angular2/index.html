@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="bootcss/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/property.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/banner.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css/propertyscroll.css">
+    <link rel="stylesheet" type="text/css" href="css/detailsproperty.css">
+    <link rel="stylesheet" type="text/css" href="css/adminDashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/adminUserDetails.css">
+    <link rel="stylesheet" type="text/css" href="css/adminUserProperty.css">
+    <link rel="stylesheet" type="text/css" href="css/emailverifiForgetpass.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,300,700'
+        rel='stylesheet' type='text/css'>
+    <link href="https://codepen.io/api/oembed?url=https://codepen.io/MarcMalignan/pen/jABfk&format=json"
+        title="AngularJS + Google Maps API" />
+
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script type="text/javascript" src='https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js'></script>
+         
+        <script id="facebook-jssdk" async="" src="//connect.facebook.net/en_US/sdk.js"></script> 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+   
+        <script src="app.js"></script>
+        <script src="/js/signup.js"></script>
+        <script src="/js/login.js"></script>
+         <!-- <script src="/js/tab.js"></script>  -->
+        <!-- <script src="/js/multipleimg.js"></script>  -->
+        <!-- <script src="/js/nextpreviousbtn.js"></script> -->
+        <!-- <script src="/js/pagination.js"></script> -->
+        <!-- <script src="/js/paginationcontroller.js"></script> -->
+       <script src="/js/home.js"></script>
+       <!-- <script src="/js/mail.js"></script> -->
+       <script src="/js/img.js"></script>
+       <script src="/js/kalvin.js"></script>
+       <script src="/js/properti.js"></script>
+       <script src="/js/forgetpassword.js"></script>
+       <script src="/js/contact.js"></script>
+       <script src="/js/banner.js"></script>
+       <script src="/js/propertyscroll.js"></script>
+       <script src="/js/slideshow.js"></script>
+       <script src="/js/detailsproperty.js"></script>
+       <script src="/js/EmailverifiForgetpass.js"></script>
+       <script src="/js/adminDashboard.js"></script>
+       <script src="/js/adminUserDetails.js"></script>
+       <script src="/js/adminUserProperty.js"></script>
+       <!-- <script src="/js/chart.js"></script>
+        -->
+       
+       <!-- <script src="/js/submitproperty.js"></script> -->
+       <!-- <script src="/js/property.js"></script> -->
+       
+    </head>
+    <body ng-controller="myctrl">
+         <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="logo">
+                            <a ui-sref="Home"><img src="/images/logo.png" alt="img" /></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <navbar>
+                            <nav>
+                                <ul>
+                                    <li><a ui-sref="Home" ng-If="isLoggedIn">Home</a></li>
+                                    <li><a ui-sref="propertyscroll"  ng-If="!isLoggedIn">Home</a></li>
+                                    <li><a ui-sref="About">About</a></li>
+                                    <li><a ui-sref="Contact">Contact</a></li>
+                                    <!-- <li><a ui-sref="Forgetpassword({email: 'saurabh.gup890', pass: 1234})">Contact</a></li> -->
+                                    <li><a ui-sref="Property"  ng-If="isLoggedIn">Property</a></li>
+                                    <!-- <li><a ui-sref="paginstion">property</a></li> -->
+                                    <li><a class="loginbtn" ui-sref="Login" ng-If="!isLoggedIn">Login</a></li>
+                                    <li><a  class="signinbtn" ui-sref="Signup" ng-If="!isLoggedIn">Signup</a></li>
+                                    <li><a class="signinbtn"  ng-click="logout()" ng-If="isLoggedIn">Logout</a></li>
+                                    <li><a class="signinbtn" ui-sref="adminDashboard.adminUserProperty" ng-If="isLoggedIn">Admin</a></li>
+                                </ul>
+                            </nav>
+                        </navbar>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- <div ng-include="'/tamplate/Header.html'"></div> -->
+        <div ui-view></div>
+    </body>
+</html>

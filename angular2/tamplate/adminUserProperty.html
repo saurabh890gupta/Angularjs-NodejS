@@ -1,0 +1,134 @@
+<!-- <div ng-include="'/tamplate/adminDashboard.html'"></div>  -->
+<div class="table-scrol">  
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align:center">All The Property UserDetails</h1>  
+                <div class="table-responsive"> 
+                    <div class="form-group">
+                        <label>Search:</label>
+                        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                    </div>
+                    <form>
+                        <table class="table table-bordered table-hover table-striped">  
+                            <thead >    
+                                <tr>  
+                                    <th>Serial.No</th>        
+                                    <th>Name</th>  
+                                    <th>Phone</th>  
+                                    <th>Price</th> 
+                                    <th>State</th>  
+                                    <th>Status</th>  
+                                    <th>City</th>  
+                                    <th>Delete</th>  
+                                </tr>  
+                            </thead> 
+                            <tbody ng-repeat=" x in result | offset: currentPage*itemsPerPage | limitTo: itemsPerPage |filter:search">
+                                <tr  ng-click="bar($index,x.propertyleaseperioud,x.propertyminbed)" >
+                                    <td>
+                                        <div>{{$index + 1*(currentPage*itemsPerPage)}}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{x.propertyname}}</div>
+                                    </td>
+                                    <td> 
+                                        <div >{{x.phone}}</div>
+                                    </td>
+                                    <td>
+                                        <div >{{x.propertyprice}}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{x.propertystate}}</div>
+                                    </td>
+                                    <td>
+                                        <div >{{x.propertystatus}}</div>
+                                    </td>
+                                    <td>
+                                        <div >{{x.propertycity}}</div>
+                                    </td>
+                                    <td>
+                                        <div><a class="adminUserDeletBtn" ng-click="DeleteUserProperty(x)">Delete</a></div>
+                                    </td>
+                                    <tr ng-show = "IsVis">
+                                        <td colspan="9">
+                                            <div class="span9">
+                                                <div class="pull-right">
+                                                    <table class="table table-hover table-condensed table-striped">
+                                                        <thead class="levelTwo">
+                                                            <tr>
+                                                                <th colspan="2">laundryroom</th>
+                                                                <th colspan="2">leaseperioud</th>
+                                                                <th colspan="2">minbed</th>
+                                                                <th colspan="2">area</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>{{x.propertylaundryroom}}</td>
+                                                                <td colspan="3">{{x.propertyleaseperioud}}</td>
+                                                                <td colspan="3">{{x.propertyminbed}}</td>
+                                                                <td colspan="1">{{x.propertyarea}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> 
+                                                </div>  
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tr>
+                               
+                            </tbody> 
+                            <!-- <tbody ng-show = "IsVis">
+                                <tr >
+                                    <td colspan="9">
+                                        <div class="span9">
+                                            <div class="pull-right">
+                                                <table class="table table-hover table-condensed table-striped">
+                                                    <thead class="levelTwo">
+                                                        <tr>
+                                                            <th>status</th>
+                                                            <th>pl</th>
+                                                            <th>Cost</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat=" x in result | offset: currentPage*itemsPerPage | limitTo: itemsPerPage ">
+                                                            <td>{{x.propertylaundryroom}}</td>
+                                                            <td>{{x.propertyleaseperioud}}</td>
+                                                            <td>{{x.propertyleaseperioud}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> 
+                                            </div>  
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+                             <!-- <p>{{pass}}</p>
+                             <p>{{leaseperioud}}</p>
+                             <p>{{minbed}}</p> -->
+
+                        </table>
+                    </form>
+                    <tfoot >
+                            <td colspan="3" >
+                                <div class="pagination" class="pull-right">
+                                <ul>
+                                    <li ng-class="prevPageDisabled()">
+                                    <a href ng-click="prevPage()">« Prev</a>
+                                    </li>
+                                    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                                    <a href="#">{{n+1}}</a>
+                                    </li>
+                                    <li ng-class="nextPageDisabled()">
+                                    <a href ng-click="nextPage()">Next »</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </td>
+                        </tfoot> 
+                </div>
+            </div>     
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.banner-down{
+    width: 100%;
+    border:1px solid black;
+  }
+  .banner_section2{
+     height: 120px;
+    border:1px solid black;
+  }
+  #heading2{
+    padding-top: 10px;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }
+  
+  
+ .picture input[type="file"] {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
