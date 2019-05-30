@@ -1,6 +1,6 @@
 # REAL ESTATE Project
 
-##Technology Used
+## Technology Used
 ```
 1. AngularJs
 2. NodeJs
